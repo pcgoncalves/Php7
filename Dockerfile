@@ -28,8 +28,6 @@ php-apcu \
 phpunit \
 curl \
 mysql-client \
-pdo_mysql \
-pdo_pgsql \
 nano \
 && apt-get clean && apt-get autoclean && apt-get autoremove \
 && rm -rf /var/lib/apt/lists/*
