@@ -28,11 +28,11 @@ php-apcu \
 phpunit \
 curl \
 mysql-client \
+pdo_mysql \
+pdo_pgsql \
 nano \
 && apt-get clean && apt-get autoclean && apt-get autoremove \
 && rm -rf /var/lib/apt/lists/*
-
-RUN docker-php-ext-install pdo_mysql pdo_pgsql
 
 RUN a2enmod rewrite
 
