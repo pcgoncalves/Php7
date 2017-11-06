@@ -32,7 +32,7 @@ nano \
 && apt-get clean && apt-get autoclean && apt-get autoremove \
 && rm -rf /var/lib/apt/lists/*
 
-RUN docker-php-ext-install pdo pdo_mysql pdo_pgsql
+RUN docker-php-ext-install pdo_mysql pdo_pgsql
 
 RUN a2enmod rewrite
 
@@ -41,6 +41,8 @@ ENV APACHE_PID_FILE="/var/run/apache2.pid"
 ENV APACHE_RUN_USER="www-data"
 ENV APACHE_RUN_GROUP="www-data"
 ENV APACHE_LOG_DIR="/var/log/apache2"
+
+ENV PHP_SHORT_OPEN_TAG="On"
 
 LABEL Description="Webserver php 7"
 
